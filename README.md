@@ -11,5 +11,13 @@
 
 	主要配置在 /demo/settings/setting.py 文件中
 	包含: mysql 静态文件位置 模板位置 日志等
+	
+python需要安装扩展库
+
+	mysql-python
+	tornado
+	torngas
+	SQLAlchemy
+	requests
 
 	
