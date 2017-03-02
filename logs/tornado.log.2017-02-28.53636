@@ -1,0 +1,939 @@
+[32m[I 170228 10:55:43 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 10:56:01 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 10:57:00 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[33m[W 170228 10:57:58 web:1545](B[m 400 GET /project/put (192.168.15.59): Missing argument id
+[32m[I 170228 10:58:53 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[33m[W 170228 11:00:03 web:1545](B[m 400 GET /project/put (192.168.15.59): Missing argument id
+[32m[I 170228 11:00:21 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 11:00:23 web:1548](B[m Uncaught exception GET /project/put (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='GET', uri='/project/put', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/list', 'Cache-Control': 'max-age=0', 'Cookie': '__TORNADOSSID=2269E757BBFBA9B67B868FE95114C3774DE69AAC|EtdHjDO1', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 47, in get
+        self.finish(id)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 34, in finish
+        super(MiddlewareHandlerMixin, self).finish(chunk)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 923, in finish
+        raise RuntimeError("finish() called twice")
+    RuntimeError: finish() called twice
+[32m[I 170228 11:00:38 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 11:00:40 web:1548](B[m Uncaught exception GET /project/put (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='GET', uri='/project/put', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/list', 'Cache-Control': 'max-age=0', 'If-None-Match': '"7a85f4764bbd6daf1c3545efbbf0f279a6dc0beb"', 'Upgrade-Insecure-Requests': '1', 'Cookie': '__TORNADOSSID=D59891DA83DD58F02C3155D2DD6C27E6AFC0EDE1|EtdHjDO1'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 41, in get
+        self.finish(id)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 34, in finish
+        super(MiddlewareHandlerMixin, self).finish(chunk)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 926, in finish
+        self.write(chunk)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 39, in write
+        super(MiddlewareHandlerMixin, self).write(chunk)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 708, in write
+        raise TypeError(message)
+    TypeError: write() only accepts bytes, unicode, and dict objects
+[32m[I 170228 11:01:01 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 11:01:04 web:1548](B[m Uncaught exception GET /project/put (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='GET', uri='/project/put', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/list', 'Cache-Control': 'max-age=0', 'Cookie': '__TORNADOSSID=7B8561CD298C982D4BBE231E64D571954BC42FC8|EtdHjDO1', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 43, in get
+        self.finish(id)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 34, in finish
+        super(MiddlewareHandlerMixin, self).finish(chunk)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 926, in finish
+        self.write(chunk)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 39, in write
+        super(MiddlewareHandlerMixin, self).write(chunk)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 708, in write
+        raise TypeError(message)
+    TypeError: write() only accepts bytes, unicode, and dict objects
+[32m[I 170228 11:01:22 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 11:01:23 web:1548](B[m Uncaught exception GET /project/put (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='GET', uri='/project/put', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/list', 'Cache-Control': 'max-age=0', 'Cookie': '__TORNADOSSID=BFEA17195DD2DDB2252DEE3F8C01AB7E4399D6AE|EtdHjDO1', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 47, in get
+        self.finish(id)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 34, in finish
+        super(MiddlewareHandlerMixin, self).finish(chunk)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 923, in finish
+        raise RuntimeError("finish() called twice")
+    RuntimeError: finish() called twice
+[32m[I 170228 11:01:57 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/urls.py modified; restarting server
+[31m[E 170228 11:03:37 web:1548](B[m Uncaught exception GET /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='GET', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': '__TORNADOSSID=4B0E665CBD2F319C89D8561A9B9B4F4BDB3B29D7|EtdHjDO1', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 40, in get
+        self.render("admin/project_add.html", data=data)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 719, in render
+        html = self.render_string(template_name, **kwargs)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 24, in render_string
+        return super(MiddlewareHandlerMixin, self).render_string(template_name, **kwargs)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 826, in render_string
+        return t.generate(**namespace)
+      File "/Library/Python/2.7/site-packages/tornado/template.py", line 348, in generate
+        return execute()
+      File "admin/project_add_html.generated.py", line 20, in _tt_execute
+        if project_list:  # admin/project_add.html:39
+    NameError: global name 'project_list' is not defined
+[32m[I 170228 12:05:57 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 12:06:08 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 12:06:46 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 12:06:46 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '125', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=340F65EDD929517405A8FD9D6646AD8421DE7FEB|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 46, in post
+        self.finish(name)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 34, in finish
+        super(MiddlewareHandlerMixin, self).finish(chunk)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 923, in finish
+        raise RuntimeError("finish() called twice")
+    RuntimeError: finish() called twice
+[33m[W 170228 12:06:46 web:1545](B[m 404 GET /project/project/add (192.168.15.59): not found
+[32m[I 170228 12:06:57 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 12:07:01 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '125', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=87BD671ED9587A48B4DF0F873A01C26519F98527|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 46, in post
+        self.finish(name)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 34, in finish
+        super(MiddlewareHandlerMixin, self).finish(chunk)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 923, in finish
+        raise RuntimeError("finish() called twice")
+    RuntimeError: finish() called twice
+[32m[I 170228 12:08:35 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 12:08:51 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 12:08:56 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '125', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=6C8B953D88679216EFEDD5480CE7E2CB209F1B36|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 44, in post
+        if name.empty():
+    AttributeError: 'unicode' object has no attribute 'empty'
+[32m[I 170228 12:09:28 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 12:09:31 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '125', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=6C8B953D88679216EFEDD5480CE7E2CB209F1B36|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 44, in post
+        if name.empty:
+    AttributeError: 'unicode' object has no attribute 'empty'
+[32m[I 170228 12:18:57 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 12:19:17 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 12:19:19 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '125', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=0A55561E7B002C929FC5E50F5930462E3A37CA41|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 46, in post
+        self.finish(name)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 34, in finish
+        super(MiddlewareHandlerMixin, self).finish(chunk)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 923, in finish
+        raise RuntimeError("finish() called twice")
+    RuntimeError: finish() called twice
+[32m[I 170228 12:19:50 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 12:20:13 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 12:22:05 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 14:09:45 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 14:10:41 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 14:10:45 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 14:10:59 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=3F16881659D6B4A2B477DCC7D268218F086E5B2A|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 51, in post
+        insertStatus = Project.addProject(params)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got dict instance instead)
+[32m[I 170228 14:11:13 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 14:11:19 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=3F16881659D6B4A2B477DCC7D268218F086E5B2A|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 51, in post
+        insertStatus = Project.addProject(self, params)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got Add instance instead)
+[32m[I 170228 14:11:57 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 14:12:51 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:12:53 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=1D48536914AE583BA54A335F0ACD5369BD5F83AD|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 51, in post
+        insertStatus = Project.addProject(params)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got dict instance instead)
+[32m[I 170228 14:13:33 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:13:34 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=F76C7C150241B1295F898F640DB8431B4959E152|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 51, in post
+        insertStatus = Project.addProject(params)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got dict instance instead)
+[32m[I 170228 14:13:41 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 14:13:44 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:13:51 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=E7B61815A40341128B3AA0D1391155D788E6A023|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 51, in post
+        insertStatus = Project.addProject(params)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got dict instance instead)
+[32m[I 170228 14:14:57 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 14:14:59 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=38A8D7BE7CA6629773B71138F1310C8F9E896E25|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 51, in post
+        insertStatus = Project.addProject({Project.name:name, Project.checkcode:codeCheck, Project.checkemail:checkEmail, Project.path:projectPath, Project.git_path:gitPath, Project.status:1})
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got dict instance instead)
+[32m[I 170228 14:15:04 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 14:15:10 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=93FD51C0B21175C04444993B7FC94543608D01C9|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 51, in post
+        insertStatus = Project.addProject(params)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got dict instance instead)
+[32m[I 170228 14:15:34 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 14:15:35 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=0814B2F8EA21A4BCE15C9E2B71DB1374FE0A6E2A|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = Project.addProject(params)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got dict instance instead)
+[32m[I 170228 14:16:07 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 14:16:09 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=50441737169C5FC947D9BBB60A8B7A913739B8B8|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = Project.addProject({})
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got dict instance instead)
+[32m[I 170228 14:16:18 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 14:16:18 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=C10D9742BFD48E0A879357F9E7048EAAE8A746EF|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = Project.addProject(name)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got unicode instance instead)
+[32m[I 170228 14:16:36 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:16:38 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=086A4135341F7296DC96857EEB5350002E9DEB18|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = Project.addProject(name)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got unicode instance instead)
+[32m[I 170228 14:16:57 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:17:10 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=82FAFA83D633A7753220AE7CD9AAB33BB9E30550|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = Project.addProject(name)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got unicode instance instead)
+[32m[I 170228 14:17:37 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 14:17:39 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=91BDD8622E609FBD97DEFCF7D3EFE100A75E0AA7|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = Project.addProject(name, 0)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got unicode instance instead)
+[32m[I 170228 14:18:28 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:18:29 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=792A7DF0CB00F0E41BA90E1EDA4AC18044C64D11|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = Project.addProject(name, 0)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got unicode instance instead)
+[32m[I 170228 14:19:16 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:19:18 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=26AA5F3EF7412EA34DACBB804CD11283198281E2|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = Project.addProject(name, 0)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got unicode instance instead)
+[32m[I 170228 14:19:28 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:19:30 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=AB4A077443F8F23CBEB52F09ECD16CE3CB026949|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = Project.addProject(name, 0)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got unicode instance instead)
+[32m[I 170228 14:19:35 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:19:36 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=34B9E69D0CF075F3D4B72D9C8D14A0243783F7A9|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = Project.addProject(name, 0)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got unicode instance instead)
+[31m[E 170228 14:20:13 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=80E03E2D818C11598FFE48B0F54EEEDA24EDA86E|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = Project.addProject(name, 0)
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got unicode instance instead)
+[32m[I 170228 14:20:34 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 14:20:40 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 14:20:48 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 14:20:49 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=80E03E2D818C11598FFE48B0F54EEEDA24EDA86E|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = Project.addProject()
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got nothing instead)
+[32m[I 170228 14:21:03 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 14:21:04 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=69568DD78C694B38FB18B7C0D55A905B5E83912B|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 51, in post
+        insertStatus = Project.addProject()
+    TypeError: unbound method addProject() must be called with Project instance as first argument (got nothing instead)
+[32m[I 170228 14:21:25 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 14:21:36 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:21:37 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=9DC9092E4A5DBF7D35132E9C8B41580B8D7E2A5D|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 53, in post
+        self.finish(insertStatus)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 31, in finish
+        self.write(chunk)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 39, in write
+        super(MiddlewareHandlerMixin, self).write(chunk)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 708, in write
+        raise TypeError(message)
+    TypeError: write() only accepts bytes, unicode, and dict objects
+[32m[I 170228 14:21:51 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:21:53 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=FE4C76872B7F5B7CF97B1B8EE7081715419B249F|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 53, in post
+        self.finish(insertStatus)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 31, in finish
+        self.write(chunk)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 39, in write
+        super(MiddlewareHandlerMixin, self).write(chunk)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 708, in write
+        raise TypeError(message)
+    TypeError: write() only accepts bytes, unicode, and dict objects
+[32m[I 170228 14:23:11 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 14:23:50 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 14:23:58 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 14:24:05 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 14:24:13 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:24:15 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=97063C504484C87368E09102CAD5FF5D95D019BF|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 54, in post
+        self.finish(insertStatus)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 31, in finish
+        self.write(chunk)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 39, in write
+        super(MiddlewareHandlerMixin, self).write(chunk)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 708, in write
+        raise TypeError(message)
+    TypeError: write() only accepts bytes, unicode, and dict objects
+[32m[I 170228 14:24:37 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 14:24:40 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 14:24:46 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=902A93E7DCF3CC08A8AA516922B85386BEB0CE49|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 51, in post
+        params['name'] = name
+    TypeError: list indices must be integers, not str
+[32m[I 170228 14:24:55 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 14:24:56 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=EA9D180FEBE7DC96504236A9852CD119B71727DC|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 55, in post
+        self.finish(insertStatus)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 31, in finish
+        self.write(chunk)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 39, in write
+        super(MiddlewareHandlerMixin, self).write(chunk)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 708, in write
+        raise TypeError(message)
+    TypeError: write() only accepts bytes, unicode, and dict objects
+[32m[I 170228 14:25:17 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 14:25:28 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 14:25:45 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 14:25:46 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=DDB81CB1555A6475F58CD69184696DE40416C3BD|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 56, in post
+        self.redirect('/project/list')
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 677, in redirect
+        raise Exception("Cannot redirect after headers have been written")
+    Exception: Cannot redirect after headers have been written
+[32m[I 170228 14:26:07 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 14:26:13 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[32m[I 170228 14:28:21 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:28:59 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=93CA4690B2E318923E5B7792CC44C67BF5959067|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 38, in addProject
+        return Project.Q.add(params)
+    AttributeError: 'BaseQuery' object has no attribute 'add'
+[32m[I 170228 14:40:02 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 14:41:39 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 14:41:41 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:41:47 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=3BBAACB1A054F989EB906F2457C13D489172E5A3|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        return Project.Q.add(params)
+    AttributeError: 'BaseQuery' object has no attribute 'add'
+[32m[I 170228 14:42:42 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:42:45 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=5559156385E8DA1E040E5E6E0A33D2FD37C2B4C5|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        return Project.Q.add(params)
+    AttributeError: 'BaseQuery' object has no attribute 'add'
+[32m[I 170228 14:43:05 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:43:08 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=9978DF0E9B0266F44B462DDBD4EEE92AD746FF1D|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        return Project.Q.add(params)
+    AttributeError: 'BaseQuery' object has no attribute 'add'
+[32m[I 170228 14:47:09 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:47:12 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=94A3058BA1A7D0D2AB141D6E248EFF6D3F3A3786|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 38, in addProject
+        return Project.Q.values(params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 1199, in values
+        q._set_entities(columns, entity_wrapper=_ColumnEntity)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 120, in _set_entities
+        entity_wrapper(self, ent)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 3907, in __init__
+        "expected - got '%r'" % (column, )
+    InvalidRequestError: SQL expression, column, or mapped entity expected - got '{<sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10b326830>: u'0', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10b326a70>: u'git@gitlab.self.com.cn:mobile/wireless.git', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10b3266b0>: u'test', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10b3268f0>: u'0', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10b326770>: 1, <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10b3269b0>: u'/home/www/test'}'
+[31m[E 170228 14:52:45 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=382AD8C7022AEE5AF3E9EB2A69C8C00BE4B840FB|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 38, in addProject
+        return Project.Q.values(params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 1199, in values
+        q._set_entities(columns, entity_wrapper=_ColumnEntity)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 120, in _set_entities
+        entity_wrapper(self, ent)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 3907, in __init__
+        "expected - got '%r'" % (column, )
+    InvalidRequestError: SQL expression, column, or mapped entity expected - got '{<sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10b326830>: u'0', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10b326a70>: u'git@gitlab.self.com.cn:mobile/wireless.git', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10b3266b0>: u'test', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10b3268f0>: u'0', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10b326770>: 1, <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10b3269b0>: u'/home/www/test'}'
+[32m[I 170228 14:53:55 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:53:58 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=382AD8C7022AEE5AF3E9EB2A69C8C00BE4B840FB|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        return Project.Q.values(params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 1199, in values
+        q._set_entities(columns, entity_wrapper=_ColumnEntity)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 120, in _set_entities
+        entity_wrapper(self, ent)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 3907, in __init__
+        "expected - got '%r'" % (column, )
+    InvalidRequestError: SQL expression, column, or mapped entity expected - got '{<sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10efcb830>: u'0', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10efcba70>: u'git@gitlab.self.com.cn:mobile/wireless.git', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10efcb6b0>: u'test', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10efcb8f0>: u'0', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10efcb770>: 1, <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x10efcb9b0>: u'/home/www/test'}'
+[32m[I 170228 14:55:05 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:55:06 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=F9A05F356D3836D479D3DBAE1643D19793BAD649|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 37, in addProject
+        print Project.session.add(params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 157, in do
+        return getattr(self.registry(), name)(*args, **kwargs)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1677, in add
+        raise exc.UnmappedInstanceError(instance)
+    UnmappedInstanceError: Class '__builtin__.dict' is not mapped
+[32m[I 170228 14:56:48 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 14:58:15 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 14:58:17 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=C656CFAEAC10E04150AD96806D553E8DF8FDA008|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        return Project.Q.values(params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 1199, in values
+        q._set_entities(columns, entity_wrapper=_ColumnEntity)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 120, in _set_entities
+        entity_wrapper(self, ent)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 3907, in __init__
+        "expected - got '%r'" % (column, )
+    InvalidRequestError: SQL expression, column, or mapped entity expected - got '{<sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x104d32830>: u'0', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x104d32a70>: u'git@gitlab.self.com.cn:mobile/wireless.git', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x104d326b0>: u'test', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x104d328f0>: u'0', <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x104d32770>: 1, <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x104d329b0>: u'/home/www/test'}'
+[32m[I 170228 16:04:41 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:04:44 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=4E82A470BC611496B972FED7C98CABD9B53E3E71|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        ed_project = Project(params.name, params.status)
+    AttributeError: 'dict' object has no attribute 'name'
+[32m[I 170228 16:04:57 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:04:59 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=60C90B4CC81DBB8D461BAED6126AA8E334A7349B|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        ed_project = Project(params['name'], params.status)
+    KeyError: 'name'
+[32m[I 170228 16:05:14 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:05:15 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=87E95BF16D0FA12BABE02F24EBAAF4BB2CCB134C|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        ed_project = Project(params.name, params.status)
+    AttributeError: 'dict' object has no attribute 'name'
+[32m[I 170228 16:05:31 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:05:33 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=F6383941950C22F61DC4608DB08A5FD539431C4A|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        ed_project = Project(params)
+    TypeError: __init__() takes exactly 1 argument (2 given)
+[32m[I 170228 16:05:49 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:05:50 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=98232EFC322A469303AAD3E7DA2CB78D4180593B|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        ed_project = Project('name')
+    TypeError: __init__() takes exactly 1 argument (2 given)
+[32m[I 170228 16:06:32 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:06:34 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=231C4E6C91AEDDAFD3E7F0C60DAC32EE1D5B7C5A|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 37, in addProject
+        print params.name
+    AttributeError: 'dict' object has no attribute 'name'
+[32m[I 170228 16:06:43 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:06:44 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=D9DA4A218A00538362F19829CC64FB0B53B5A5CB|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        ed_project = Project('name')
+    TypeError: __init__() takes exactly 1 argument (2 given)
+[32m[I 170228 16:07:01 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:07:02 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=9165396775F12E4EDA9DD36F06AD1809C2604CF5|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 37, in addProject
+        print params.Project.name
+    AttributeError: 'dict' object has no attribute 'Project'
+[32m[I 170228 16:07:11 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:07:53 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py modified; restarting server
+[31m[E 170228 16:07:55 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=F06E6021BE552319192CA9903BFD1671CE4FBA46|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        ed_project = Project('name')
+    TypeError: __init__() takes exactly 1 argument (2 given)
+[32m[I 170228 16:08:10 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:08:11 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '209', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=E90C19FFE402ADECD77BD47032490A05FB19C8FE|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 37, in addProject
+        print params.name
+    AttributeError: 'dict' object has no attribute 'name'
+[32m[I 170228 16:08:34 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:08:35 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:08:58 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '135', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=9C028588B62663F0B6F84916C317BC4B3E53E0AA|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 37, in addProject
+        print params['names']
+    KeyError: 'names'
+[32m[I 170228 16:09:04 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:09:05 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '135', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=9C028588B62663F0B6F84916C317BC4B3E53E0AA|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        ed_project = Project('name')
+    TypeError: __init__() takes exactly 1 argument (2 given)
+[32m[I 170228 16:09:23 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:09:24 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '135', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=17446E74A7952AC66AB237F78305F332A6C292ED|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        ed_project = Project(params['name'])
+    TypeError: __init__() takes exactly 1 argument (2 given)
+[32m[I 170228 16:10:46 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:14:47 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:14:51 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '135', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=2A4568A0BCD1A60D027E1416153DD62D8E6C815B|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 40, in addProject
+        print Project.session.add(params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 157, in do
+        return getattr(self.registry(), name)(*args, **kwargs)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1677, in add
+        raise exc.UnmappedInstanceError(instance)
+    UnmappedInstanceError: Class '__builtin__.dict' is not mapped
+[32m[I 170228 16:15:18 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:15:20 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '135', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=673EC1DF353AD4DC25AECE669BFA5587CDE9DC99|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 40, in addProject
+        print Project.session.add(params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 157, in do
+        return getattr(self.registry(), name)(*args, **kwargs)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1677, in add
+        raise exc.UnmappedInstanceError(instance)
+    UnmappedInstanceError: Class '__builtin__.dict' is not mapped
+[32m[I 170228 16:15:54 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:15:58 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '135', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=B969D6D76266E045A728CD98CFBA75B93F5A7254|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 40, in addProject
+        print Project.session.add(params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 157, in do
+        return getattr(self.registry(), name)(*args, **kwargs)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 1677, in add
+        raise exc.UnmappedInstanceError(instance)
+    UnmappedInstanceError: Class '__builtin__.dict' is not mapped
+[32m[I 170228 16:19:08 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:19:11 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '135', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=618D3CC6ABC80F2B63119FC34C6137F5ECD5AF88|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 39, in addProject
+        project = Project(params['name'],params['status'], params['checkcode'], params['checkemail'], params['path'],params['git_path'])
+    TypeError: __init__() takes exactly 1 argument (7 given)
+[32m[I 170228 16:20:54 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:20:57 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:21:23 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:21:25 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '135', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=81CF8A20E9F60816345966A57EDA3B1334C72E0E|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 41, in addProject
+        return Project.Q.values(params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 1199, in values
+        q._set_entities(columns, entity_wrapper=_ColumnEntity)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 120, in _set_entities
+        entity_wrapper(self, ent)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 3907, in __init__
+        "expected - got '%r'" % (column, )
+    InvalidRequestError: SQL expression, column, or mapped entity expected - got '{'status': 1, 'name': u'11', 'checkcode': u'0', 'git_path': u'21', 'path': u'231', 'checkemail': u'0'}'
+[32m[I 170228 16:21:40 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:21:41 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '135', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=02A5CC937BD82E1A8BEC9C34A37006B2B8D572D6|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 41, in addProject
+        return Project.Q.values(params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 1199, in values
+        q._set_entities(columns, entity_wrapper=_ColumnEntity)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 120, in _set_entities
+        entity_wrapper(self, ent)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 3907, in __init__
+        "expected - got '%r'" % (column, )
+    InvalidRequestError: SQL expression, column, or mapped entity expected - got '{'status': 1, 'name': u'11', 'checkcode': u'0', 'git_path': u'21', 'path': u'231', 'checkemail': u'0'}'
+[32m[I 170228 16:22:12 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:22:21 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:32:52 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:34:29 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:37:08 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:37:24 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:38:03 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:38:17 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:38:48 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:39:21 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:40:03 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:40:41 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:40:57 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:41:09 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:42:40 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:46:22 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:46:47 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '143', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=A19BAA0E26E1CC2B1CD1C3FED1FAB4194DABE246|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 45, in addProject
+        print Project.insert()
+    AttributeError: type object 'Project' has no attribute 'insert'
+[32m[I 170228 16:47:47 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:47:49 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '143', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=A19BAA0E26E1CC2B1CD1C3FED1FAB4194DABE246|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 45, in addProject
+        print Project.session.insert()
+    AttributeError: 'scoped_session' object has no attribute 'insert'
+[32m[I 170228 16:47:57 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:47:58 web:1548](B[m Uncaught exception POST /project/add (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='POST', uri='/project/add', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Origin': 'http://192.168.15.59:8000', 'Content-Length': '143', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=CC59C83E88A6C552F5CE73307EE691E618EB518E|EtdHjDO1', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Content-Type': 'application/x-www-form-urlencoded'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 52, in post
+        insertStatus = project.addProject(params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 45, in addProject
+        print Project.Q.insert()
+    AttributeError: 'BaseQuery' object has no attribute 'insert'
+[32m[I 170228 16:48:04 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:55:03 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:55:29 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 16:56:12 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 16:56:13 web:1548](B[m Uncaught exception GET /project/list (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='GET', uri='/project/list', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/list', 'Cache-Control': 'max-age=0', 'If-None-Match': '"5beeee484649fed4a1d7eef29f4a50301580a0c5"', 'Upgrade-Insecure-Requests': '1', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=E9900D7B30987EB28F1A6937C607DF1D5CFA7DFD|EtdHjDO1'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 19, in get
+        project_list = project.GetProjectByCondition(self)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 28, in GetProjectByCondition
+        project_list = Project.Q.filter().order('id desc').all()
+    AttributeError: 'BaseQuery' object has no attribute 'order'
+[32m[I 170228 16:56:21 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 17:15:42 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 17:15:44 web:1548](B[m Uncaught exception GET /project/list (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='GET', uri='/project/list', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/list', 'Cache-Control': 'max-age=0', 'If-None-Match': '"5beeee484649fed4a1d7eef29f4a50301580a0c5"', 'Upgrade-Insecure-Requests': '1', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=10B0F07501FD5C4E3C303281221D6605C72EF60E|EtdHjDO1'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 19, in get
+        project_list = project.GetProjectByCondition(self)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 28, in GetProjectByCondition
+        project_list = Project.session.filter().all()
+    AttributeError: 'scoped_session' object has no attribute 'filter'
+[32m[I 170228 17:15:53 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 17:15:54 web:1548](B[m Uncaught exception GET /project/list (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='GET', uri='/project/list', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/list', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=D33D3B660F69E2B991AF21A8277FF60F2D9880C9|EtdHjDO1', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 19, in get
+        project_list = project.GetProjectByCondition(self)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 28, in GetProjectByCondition
+        project_list = Project.session.all()
+    AttributeError: 'scoped_session' object has no attribute 'all'
+[32m[I 170228 17:16:32 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 17:16:34 web:1548](B[m Uncaught exception GET /project/list (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='GET', uri='/project/list', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/list', 'Cache-Control': 'max-age=0', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=919192CB3BA66A79EF722D7C60947AE91E1B23FC|EtdHjDO1', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 19, in get
+        project_list = project.GetProjectByCondition(self)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 28, in GetProjectByCondition
+        project_list = Project.session.query().all()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 2638, in all
+        return list(self)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 2786, in __iter__
+        context = self._compile_context()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 3325, in _compile_context
+        "Query contains no columns with which to "
+    InvalidRequestError: Query contains no columns with which to SELECT from.
+[32m[I 170228 17:16:46 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 17:17:00 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 17:17:38 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 17:17:53 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 17:18:07 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 17:18:55 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 17:18:57 web:1548](B[m Uncaught exception GET /project/list (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='GET', uri='/project/list', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/list', 'Cache-Control': 'max-age=0', 'If-None-Match': '"15a0913ec60debfd7009bb01cdbbc67e21776c1e"', 'Upgrade-Insecure-Requests': '1', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=8F0DF7CC7064299412487BF370E1BAE98A36CBCA|EtdHjDO1'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 20, in get
+        self.render("admin/project_list.html", data=data,project_list=project_list)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 719, in render
+        html = self.render_string(template_name, **kwargs)
+      File "/Library/Python/2.7/site-packages/torngas/mixins/miiddleware.py", line 24, in render_string
+        return super(MiddlewareHandlerMixin, self).render_string(template_name, **kwargs)
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 826, in render_string
+        return t.generate(**namespace)
+      File "/Library/Python/2.7/site-packages/tornado/template.py", line 348, in generate
+        return execute()
+      File "admin/project_list_html.generated.py", line 30, in _tt_execute
+        _tt_tmp = project.name  # admin/project_list.html:43
+    AttributeError: 'result' object has no attribute 'name'
+[32m[I 170228 17:19:10 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 17:19:17 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[31m[E 170228 17:19:20 web:1548](B[m Uncaught exception GET /project/list (192.168.15.59)
+    HttpRequest(protocol='http', host='192.168.15.59:8000', method='GET', uri='/project/list', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/list', 'Cache-Control': 'max-age=0', 'If-None-Match': '"15a0913ec60debfd7009bb01cdbbc67e21776c1e"', 'Upgrade-Insecure-Requests': '1', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=723220FD15F43C9181D96D7CFB72E29342243883|EtdHjDO1'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 19, in get
+        project_list = project.GetProjectByCondition(self)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 28, in GetProjectByCondition
+        project_list = Project.session.query().order_by(Project.id.desc(), Project.id).all()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 2638, in all
+        return list(self)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 2786, in __iter__
+        context = self._compile_context()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 3325, in _compile_context
+        "Query contains no columns with which to "
+    InvalidRequestError: Query contains no columns with which to SELECT from.
+[32m[I 170228 17:19:26 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 17:19:32 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
+[32m[I 170228 17:20:04 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/project_models.py modified; restarting server
