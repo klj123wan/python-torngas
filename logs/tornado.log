@@ -911,3 +911,60 @@
 [32m[I 170327 17:54:36 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py modified; restarting server
 [32m[I 170327 17:54:52 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py modified; restarting server
 [32m[I 170327 17:55:30 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py modified; restarting server
+[31m[E 170327 18:20:57 web:1548](B[m Uncaught exception GET /rsync/add (127.0.0.1)
+    HttpRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/rsync/add', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'PHPSESSID=bh2r0tvg47dhk23kqmmgmj14s5; _xsrf=2|a90a53ec|519d406933e3f00c5eb90ce88ae84f34|1489735875; __TORNADOSSID=307FA2ECD9AE0DDE6BEBB07BA1D0A2D8D241CDE7|EtdHjDO1', 'Cache-Control': 'max-age=0', 'If-None-Match': '"8c4790367523300935d51d377cc008909fb53e75"', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/data/source/miniconda2/lib/python2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py", line 21, in get
+        noPublish[i].created = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(noPublish[i].created))
+    TypeError: a float is required
+[31m[E 170327 18:21:48 web:1548](B[m Uncaught exception GET /rsync/add (127.0.0.1)
+    HttpRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/rsync/add', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'PHPSESSID=bh2r0tvg47dhk23kqmmgmj14s5; _xsrf=2|a90a53ec|519d406933e3f00c5eb90ce88ae84f34|1489735875; __TORNADOSSID=307FA2ECD9AE0DDE6BEBB07BA1D0A2D8D241CDE7|EtdHjDO1', 'Cache-Control': 'max-age=0', 'If-None-Match': '"3e91f9bb8d4d66d63a2626e995dda7868cbad675"', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/data/source/miniconda2/lib/python2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py", line 21, in get
+        noPublish[i].created = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(noPublish[i].created))
+    TypeError: a float is required
+[31m[E 170327 18:21:51 web:1548](B[m Uncaught exception GET /rsync/add (127.0.0.1)
+    HttpRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/rsync/add', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'PHPSESSID=bh2r0tvg47dhk23kqmmgmj14s5; _xsrf=2|a90a53ec|519d406933e3f00c5eb90ce88ae84f34|1489735875; __TORNADOSSID=307FA2ECD9AE0DDE6BEBB07BA1D0A2D8D241CDE7|EtdHjDO1', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/data/source/miniconda2/lib/python2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py", line 21, in get
+        noPublish[i].created = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(noPublish[i].created))
+    TypeError: a float is required
+[31m[E 170327 18:22:11 web:1548](B[m Uncaught exception GET /rsync/add (127.0.0.1)
+    HttpRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/rsync/add', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'PHPSESSID=bh2r0tvg47dhk23kqmmgmj14s5; _xsrf=2|a90a53ec|519d406933e3f00c5eb90ce88ae84f34|1489735875; __TORNADOSSID=307FA2ECD9AE0DDE6BEBB07BA1D0A2D8D241CDE7|EtdHjDO1', 'Cache-Control': 'max-age=0', 'If-None-Match': '"144ca76a750c9e451f69ec2b6e3a3e05cb754030"', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/data/source/miniconda2/lib/python2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py", line 21, in get
+        noPublish[i].created = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(noPublish[i].created))
+    TypeError: a float is required
+[31m[E 170327 18:22:13 web:1548](B[m Uncaught exception GET /rsync/add (127.0.0.1)
+    HttpRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/rsync/add', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'PHPSESSID=bh2r0tvg47dhk23kqmmgmj14s5; _xsrf=2|a90a53ec|519d406933e3f00c5eb90ce88ae84f34|1489735875; __TORNADOSSID=307FA2ECD9AE0DDE6BEBB07BA1D0A2D8D241CDE7|EtdHjDO1', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/data/source/miniconda2/lib/python2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py", line 21, in get
+        noPublish[i].created = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(noPublish[i].created))
+    TypeError: a float is required
+[31m[E 170327 18:22:57 web:1548](B[m Uncaught exception GET /rsync/add (127.0.0.1)
+    HttpRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/rsync/add', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'PHPSESSID=bh2r0tvg47dhk23kqmmgmj14s5; _xsrf=2|a90a53ec|519d406933e3f00c5eb90ce88ae84f34|1489735875; __TORNADOSSID=307FA2ECD9AE0DDE6BEBB07BA1D0A2D8D241CDE7|EtdHjDO1', 'Cache-Control': 'max-age=0', 'If-None-Match': '"24bc88c8f23c0f34d32353d6482c643dcb98f0fc"', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/data/source/miniconda2/lib/python2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py", line 21, in get
+        noPublish[i].created = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(noPublish[i].created))
+    TypeError: a float is required
+[31m[E 170327 18:23:02 web:1548](B[m Uncaught exception GET /rsync/add (127.0.0.1)
+    HttpRequest(protocol='http', host='127.0.0.1:8000', method='GET', uri='/rsync/add', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch, br', 'Host': '127.0.0.1:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Cookie': 'PHPSESSID=bh2r0tvg47dhk23kqmmgmj14s5; _xsrf=2|a90a53ec|519d406933e3f00c5eb90ce88ae84f34|1489735875; __TORNADOSSID=307FA2ECD9AE0DDE6BEBB07BA1D0A2D8D241CDE7|EtdHjDO1', 'Cache-Control': 'max-age=0', 'Upgrade-Insecure-Requests': '1'})
+    Traceback (most recent call last):
+      File "/data/source/miniconda2/lib/python2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py", line 21, in get
+        noPublish[i].created = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(noPublish[i].created))
+    TypeError: a float is required
+[32m[I 170327 18:23:51 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py modified; restarting server

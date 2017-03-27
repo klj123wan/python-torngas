@@ -112,7 +112,15 @@
                                         <td>{{ publish.username }}</td>
                                         <td>{{ publish.description }}</td>
                                         <td>{{ publish.project }}</td>
-                                        <td>{{ publish.files }}</td>
+                                        <td>
+                                            <span class="btn btn-primary showfiles" data-toggle="popover"
+                                                  data-placement="bottom"
+                                                  data-content="{{ publish.files }}" title=""
+                                                  data-original-title="修改文件列表如下" alt="{{ publish.files }}">
+                                            <i class="fa fa-file-text"></i>
+                                            2
+                                            </span>
+                                        </td>
                                         <td>{{ publish.created }}</td>
                                         <td>
                                             {% if publish.status == 1%}

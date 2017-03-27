@@ -18,7 +18,8 @@ class Add(BaseHandler):
 
         #没有找到模板中格式化时间的方法暂时这样写吧
         for i in range(j):
-            noPublish[i].created = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(noPublish[i].created))
+            if noPublish[i].created > 0:
+                noPublish[i].created = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(noPublish[i].created))
 
 
         self.render("admin/rsync_add.html", data=data,projects=self.projectAll(),noPublist=noPublish)
