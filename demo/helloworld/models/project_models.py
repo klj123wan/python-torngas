@@ -46,5 +46,8 @@ class Project(BaseModel):
 
     #获取项目信息
     def getProjectInfo(self, id):
-
         return Project.Q.filter(Project.id == id).limit(1).all()
+
+    #获取所有状态正常的项目
+    def getNormalProjects(self) :
+        return Project.Q.filter(Project.status == 1).all()

@@ -1,16 +1,193 @@
-[33m[W 170302 10:03:34 web:1545](B[m 404 GET /project/project/list (192.168.15.94): not found
-[33m[W 170302 10:44:49 web:1545](B[m 404 GET /project/project/list (192.168.15.94): not found
-[33m[W 170302 10:44:55 web:1545](B[m 404 GET /project//list (192.168.15.94): not found
-[32m[I 170302 10:52:08 autoreload:204](B[m /data/www/python/www.torngas.com/demo/settings/setting.py modified; restarting server
-[31m[E 170302 10:52:11 web:1548](B[m Uncaught exception GET /project/list (192.168.15.59)
-    HttpRequest(protocol='http', host='192.168.15.59:8000', method='GET', uri='/project/list', version='HTTP/1.1', remote_ip='192.168.15.59', headers={'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '192.168.15.59:8000', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'Referer': 'http://192.168.15.59:8000/project/add', 'Cache-Control': 'max-age=0', 'If-None-Match': '"4b2ad71788ca3cca5cc756c22305d329de52aeb0"', 'Upgrade-Insecure-Requests': '1', 'Cookie': '_xsrf=2|d75a1014|e581bca06d575a45cdcf59f7794dde3d|1488251160; __TORNADOSSID=F72D24A6A25A022CC83B7F0DD5B1A578CECC16A1|EtdHjDO1'})
+[32m[I 170324 11:48:53 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py modified; restarting server
+[32m[I 170324 11:50:57 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/rsync_models.py modified; restarting server
+[31m[E 170324 12:13:24 web:1548](B[m Uncaught exception POST /rsync/add (127.0.0.1)
+    HttpRequest(protocol='http', host='127.0.0.1:8000', method='POST', uri='/rsync/add', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'http://127.0.0.1:8000', 'Content-Length': '176', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, br', 'Host': '127.0.0.1:8000', 'Accept': 'application/json, text/javascript, */*; q=0.01', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://127.0.0.1:8000/rsync/add?patharea=&desc=&project=', 'Cookie': 'PHPSESSID=bh2r0tvg47dhk23kqmmgmj14s5; _xsrf=2|a90a53ec|519d406933e3f00c5eb90ce88ae84f34|1489735875; __TORNADOSSID=91A86EFDC8C468631EF1F6214AEA6160F5895727|EtdHjDO1', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
     Traceback (most recent call last):
       File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
         result = method(*self.path_args, **self.path_kwargs)
-      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/project_handler.py", line 19, in get
-        project_list = project.GetProjectByCondition(self)
-      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 29, in GetProjectByCondition
-        project_list = Project.session.query(Project).order_by(Project.id.desc()).all()
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py", line 32, in post
+        insert = rsyncModel.addRsync(self, params)
+    TypeError: addRsync() takes exactly 2 arguments (3 given)
+[32m[I 170324 12:13:58 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py modified; restarting server
+[32m[I 170324 12:14:56 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/rsync_models.py modified; restarting server
+[31m[E 170324 12:14:59 web:1548](B[m Uncaught exception POST /rsync/add (127.0.0.1)
+    HttpRequest(protocol='http', host='127.0.0.1:8000', method='POST', uri='/rsync/add', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'http://127.0.0.1:8000', 'Content-Length': '176', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, br', 'Host': '127.0.0.1:8000', 'Accept': 'application/json, text/javascript, */*; q=0.01', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://127.0.0.1:8000/rsync/add?patharea=&desc=&project=', 'Cookie': 'PHPSESSID=bh2r0tvg47dhk23kqmmgmj14s5; _xsrf=2|a90a53ec|519d406933e3f00c5eb90ce88ae84f34|1489735875; __TORNADOSSID=1C7EC180FBA30DE3531921410ED60E689EBE1464|EtdHjDO1', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py", line 32, in post
+        insert = rsyncModel.addRsync( params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/rsync_models.py", line 47, in addRsync
+        Rsync.session.commit()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 157, in do
+        return getattr(self.registry(), name)(*args, **kwargs)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 874, in commit
+        self.transaction.commit()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 461, in commit
+        self._prepare_impl()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 441, in _prepare_impl
+        self.session.flush()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2139, in flush
+        self._flush(objects)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2259, in _flush
+        transaction.rollback(_capture_exception=True)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+        compat.reraise(exc_type, exc_value, exc_tb)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2223, in _flush
+        flush_context.execute()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 389, in execute
+        rec.execute(self)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 548, in execute
+        uow
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+        mapper, table, insert)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 835, in _emit_insert_statements
+        execute(statement, params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+        return meth(self, multiparams, params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+        return connection._execute_clauseelement(self, multiparams, params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+        compiled_sql, distilled_params
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+        context)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+        exc_info
+      File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+        reraise(type(exception), exception, tb=exc_tb, cause=cause)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+        context)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 470, in do_execute
+        cursor.execute(statement, parameters)
+      File "/Library/Python/2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+        self.errorhandler(self, exc, value)
+      File "/Library/Python/2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+        raise errorclass, errorvalue
+    OperationalError: (_mysql_exceptions.OperationalError) (1048, "Column 'userip' cannot be null") [SQL: u'INSERT INTO deploy_log (uid, status, username, description, project, files, userip, created, feedback, log_from_server, pid, email) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'] [parameters: ('100', 0, 'Alex kong', u'1000', u'vogueshows', u'class/controller/mobile/apply.class.php\nclass/model/service/comm.class.php', None, None, None, None, u'8', 'konglingjian@gmail.com')]
+[32m[I 170324 12:15:49 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/rsync_models.py modified; restarting server
+[32m[I 170324 12:16:10 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py modified; restarting server
+[31m[E 170324 12:16:11 web:1548](B[m Uncaught exception POST /rsync/add (127.0.0.1)
+    HttpRequest(protocol='http', host='127.0.0.1:8000', method='POST', uri='/rsync/add', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'http://127.0.0.1:8000', 'Content-Length': '176', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, br', 'Host': '127.0.0.1:8000', 'Accept': 'application/json, text/javascript, */*; q=0.01', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://127.0.0.1:8000/rsync/add?patharea=&desc=&project=', 'Cookie': 'PHPSESSID=bh2r0tvg47dhk23kqmmgmj14s5; _xsrf=2|a90a53ec|519d406933e3f00c5eb90ce88ae84f34|1489735875; __TORNADOSSID=2F56EA24CEB7E92C43BECEDF2BD751F5F9E25483|EtdHjDO1', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py", line 33, in post
+        insert = rsyncModel.addRsync( params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/rsync_models.py", line 47, in addRsync
+        Rsync.session.commit()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 157, in do
+        return getattr(self.registry(), name)(*args, **kwargs)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 874, in commit
+        self.transaction.commit()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 461, in commit
+        self._prepare_impl()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 441, in _prepare_impl
+        self.session.flush()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2139, in flush
+        self._flush(objects)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2259, in _flush
+        transaction.rollback(_capture_exception=True)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+        compat.reraise(exc_type, exc_value, exc_tb)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2223, in _flush
+        flush_context.execute()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 389, in execute
+        rec.execute(self)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 548, in execute
+        uow
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+        mapper, table, insert)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 835, in _emit_insert_statements
+        execute(statement, params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+        return meth(self, multiparams, params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+        return connection._execute_clauseelement(self, multiparams, params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+        compiled_sql, distilled_params
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+        context)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+        exc_info
+      File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+        reraise(type(exception), exception, tb=exc_tb, cause=cause)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+        context)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 470, in do_execute
+        cursor.execute(statement, parameters)
+      File "/Library/Python/2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+        self.errorhandler(self, exc, value)
+      File "/Library/Python/2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+        raise errorclass, errorvalue
+    OperationalError: (_mysql_exceptions.OperationalError) (1048, "Column 'created' cannot be null") [SQL: u'INSERT INTO deploy_log (uid, status, username, description, project, files, userip, created, feedback, log_from_server, pid, email) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'] [parameters: ('100', 0, 'Alex kong', u'1000', u'vogueshows', u'class/controller/mobile/apply.class.php\nclass/model/service/comm.class.php', '127.0.0.1', None, None, None, u'8', 'konglingjian@gmail.com')]
+[32m[I 170324 12:16:35 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/rsync_models.py modified; restarting server
+[32m[I 170324 12:16:39 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/rsync_models.py modified; restarting server
+[32m[I 170324 12:17:18 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/rsync_models.py modified; restarting server
+[32m[I 170324 12:17:39 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/rsync_models.py modified; restarting server
+[32m[I 170324 12:19:00 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/rsync_models.py modified; restarting server
+[31m[E 170324 12:19:36 web:1548](B[m Uncaught exception POST /rsync/add (127.0.0.1)
+    HttpRequest(protocol='http', host='127.0.0.1:8000', method='POST', uri='/rsync/add', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'http://127.0.0.1:8000', 'Content-Length': '176', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, br', 'Host': '127.0.0.1:8000', 'Accept': 'application/json, text/javascript, */*; q=0.01', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://127.0.0.1:8000/rsync/add?patharea=&desc=&project=', 'Cookie': 'PHPSESSID=bh2r0tvg47dhk23kqmmgmj14s5; _xsrf=2|a90a53ec|519d406933e3f00c5eb90ce88ae84f34|1489735875; __TORNADOSSID=78621A9E7B734ACE483ECC6C3911C30257B155A6|EtdHjDO1', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py", line 33, in post
+        insert = rsyncModel.addRsync( params)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/rsync_models.py", line 49, in addRsync
+        Rsync.session.commit()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/scoping.py", line 157, in do
+        return getattr(self.registry(), name)(*args, **kwargs)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 874, in commit
+        self.transaction.commit()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 461, in commit
+        self._prepare_impl()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 441, in _prepare_impl
+        self.session.flush()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2139, in flush
+        self._flush(objects)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2259, in _flush
+        transaction.rollback(_capture_exception=True)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+        compat.reraise(exc_type, exc_value, exc_tb)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 2223, in _flush
+        flush_context.execute()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 389, in execute
+        rec.execute(self)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 548, in execute
+        uow
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+        mapper, table, insert)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/persistence.py", line 835, in _emit_insert_statements
+        execute(statement, params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 945, in execute
+        return meth(self, multiparams, params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/sql/elements.py", line 263, in _execute_on_connection
+        return connection._execute_clauseelement(self, multiparams, params)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1053, in _execute_clauseelement
+        compiled_sql, distilled_params
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1189, in _execute_context
+        context)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1393, in _handle_dbapi_exception
+        exc_info
+      File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+        reraise(type(exception), exception, tb=exc_tb, cause=cause)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
+        context)
+      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 470, in do_execute
+        cursor.execute(statement, parameters)
+      File "/Library/Python/2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+        self.errorhandler(self, exc, value)
+      File "/Library/Python/2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+        raise errorclass, errorvalue
+    OperationalError: (_mysql_exceptions.OperationalError) (1048, "Column 'feedback' cannot be null") [SQL: u'INSERT INTO deploy_log (uid, status, username, description, project, files, userip, created, feedback, log_from_server, pid, email) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'] [parameters: ('100', 0, 'Alex kong', u'1000', u'vogueshows', u'class/controller/mobile/apply.class.php\nclass/model/service/comm.class.php', '127.0.0.1', 1490329176.683785, None, None, u'8', 'konglingjian@gmail.com')]
+[31m[E 170324 12:19:52 web:1548](B[m Uncaught exception POST /rsync/add (127.0.0.1)
+    HttpRequest(protocol='http', host='127.0.0.1:8000', method='POST', uri='/rsync/add', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'http://127.0.0.1:8000', 'Content-Length': '176', 'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6', 'Accept-Encoding': 'gzip, deflate, br', 'Host': '127.0.0.1:8000', 'Accept': 'application/json, text/javascript, */*; q=0.01', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', 'Connection': 'keep-alive', 'X-Requested-With': 'XMLHttpRequest', 'Referer': 'http://127.0.0.1:8000/rsync/add?patharea=&desc=&project=', 'Cookie': 'PHPSESSID=bh2r0tvg47dhk23kqmmgmj14s5; _xsrf=2|a90a53ec|519d406933e3f00c5eb90ce88ae84f34|1489735875; __TORNADOSSID=5B269E1E4FC87A65B4A51C194B41769806AB2CD0|EtdHjDO1', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'})
+    Traceback (most recent call last):
+      File "/Library/Python/2.7/site-packages/tornado/web.py", line 1467, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py", line 25, in post
+        projectInfo = projectModel.getProjectInfo(pid)
+      File "/data/www/python/www.torngas.com/demo/helloworld/models/project_models.py", line 49, in getProjectInfo
+        return Project.Q.filter(Project.id == id).limit(1).all()
       File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 2638, in all
         return list(self)
       File "/Library/Python/2.7/site-packages/sqlalchemy/orm/query.py", line 2790, in __iter__
@@ -25,42 +202,10 @@
         execution_options=execution_options)
       File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 971, in _connection_for_bind
         engine, execution_options)
-      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 403, in _connection_for_bind
-        conn = bind.contextual_connect()
-      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 2103, in contextual_connect
-        self._wrap_pool_connect(self.pool.connect, None),
-      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 2142, in _wrap_pool_connect
-        e, dialect, self)
-      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 1456, in _handle_dbapi_exception_noconnection
-        exc_info
-      File "/Library/Python/2.7/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
-        reraise(type(exception), exception, tb=exc_tb, cause=cause)
-      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/base.py", line 2138, in _wrap_pool_connect
-        return fn()
-      File "/Library/Python/2.7/site-packages/sqlalchemy/pool.py", line 387, in connect
-        return _ConnectionFairy._checkout(self)
-      File "/Library/Python/2.7/site-packages/sqlalchemy/pool.py", line 766, in _checkout
-        fairy = _ConnectionRecord.checkout(pool)
-      File "/Library/Python/2.7/site-packages/sqlalchemy/pool.py", line 516, in checkout
-        rec = pool._do_get()
-      File "/Library/Python/2.7/site-packages/sqlalchemy/pool.py", line 1138, in _do_get
-        self._dec_overflow()
-      File "/Library/Python/2.7/site-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
-        compat.reraise(exc_type, exc_value, exc_tb)
-      File "/Library/Python/2.7/site-packages/sqlalchemy/pool.py", line 1135, in _do_get
-        return self._create_connection()
-      File "/Library/Python/2.7/site-packages/sqlalchemy/pool.py", line 333, in _create_connection
-        return _ConnectionRecord(self)
-      File "/Library/Python/2.7/site-packages/sqlalchemy/pool.py", line 461, in __init__
-        self.__connect(first_connect_check=True)
-      File "/Library/Python/2.7/site-packages/sqlalchemy/pool.py", line 651, in __connect
-        connection = pool._invoke_creator(self)
-      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/strategies.py", line 105, in connect
-        return dialect.connect(*cargs, **cparams)
-      File "/Library/Python/2.7/site-packages/sqlalchemy/engine/default.py", line 393, in connect
-        return self.dbapi.connect(*cargs, **cparams)
-      File "/Library/Python/2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
-        return Connection(*args, **kwargs)
-      File "/Library/Python/2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
-        super(Connection, self).__init__(*args, **kwargs2)
-    OperationalError: (_mysql_exceptions.OperationalError) (1044, "Access denied for user 'mysql'@'localhost' to database 'sync'")
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 382, in _connection_for_bind
+        self._assert_active()
+      File "/Library/Python/2.7/site-packages/sqlalchemy/orm/session.py", line 276, in _assert_active
+        % self._rollback_exception
+    InvalidRequestError: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (_mysql_exceptions.OperationalError) (1048, "Column 'feedback' cannot be null") [SQL: u'INSERT INTO deploy_log (uid, status, username, description, project, files, userip, created, feedback, log_from_server, pid, email) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)'] [parameters: ('100', 0, 'Alex kong', u'1000', u'vogueshows', u'class/controller/mobile/apply.class.php\nclass/model/service/comm.class.php', '127.0.0.1', 1490329176.683785, None, None, u'8', 'konglingjian@gmail.com')]
+[32m[I 170324 12:20:19 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/models/rsync_models.py modified; restarting server
+[32m[I 170324 12:24:23 autoreload:204](B[m /data/www/python/www.torngas.com/demo/helloworld/handlers/rsync_handler.py modified; restarting server

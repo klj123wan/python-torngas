@@ -1,0 +1,127 @@
+{% include 'header.html' %}
+{% include 'menu.html' %}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            上线系统
+            <small>提交代码</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/"><i class="fa fa-dashboard"></i> 首页</a></li>
+            <li class="active">添加上线记录</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-info">
+                    <div class="box-header">
+                        <h3 class="box-title">添加上线记录</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <!-- form start -->
+                        <form class="form-horizontal"  >
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="patharea" class="col-sm-2 control-label">文件</label>
+                                    {% raw xsrf_form_html() %}
+                                    <div class="col-sm-6">
+                                        <textarea class="form-control" rows="7" name="patharea" id="patharea"
+                                                  placeholder="1.文件区域不能为空；
+					2.文件路径是一个相对项目根目录的路径，一行一个路径；（例如：要同步vougecms根目录下的index.php文件只需输入：index.php）
+					3.能自动过滤文件路径开头的trunk字符，有些项目svn中复制出来的文件路径会以trunk开头；
+					4.要提交的文件中如果包含'8dev.net'，提交将失败；">
+
+                                        </textarea>
+                                    </div>
+                                    <p  class="col-sm-4">
+                                        1.文件区域不能为空；<br>
+                                        2.文件路径是一个相对项目根目录的路径，一行一个路径；（例如：要同步vougecms根目录下的index.php文件只需输入：index.php）<br>
+                                        3.能自动过滤文件路径开头的trunk字符，有些项目svn中复制出来的文件路径会以trunk开头；<br>
+                                        4.要提交的文件中如果包含"8dev.net"，提交将失败；<br>
+                                    </p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="desc" class="col-sm-2 control-label">描述</label>
+
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control validate[required]" name="desc"
+                                               id="desc"
+                                               placeholder="可以录入svn版本号直接获取svn描述">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="project" class="col-sm-2 control-label">项目</label>
+
+                                    <div class="col-sm-6 ">
+                                        <select class="form-control" name="project" id="project">
+                                            <option value="">请选择项目</option>
+                                            {% for project in projects %}
+                                            <option value="{{ project.id }}">{{ project.name }}</option>
+                                            {% end %}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                            <div class="box-footer">
+                                <button type="button" onclick="window.location.reload();" class="btn btn-default col-sm-offset-4">取消</button>
+                                <button type="button" onclick="checkFrom()" class="btn btn-info ">提交</button>
+                            </div>
+                            <!-- /.box-footer -->
+                        </form>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+
+{% include 'footer.html' %}
+
+<script>
+    function checkFrom() {
+        var file = $("#patharea").val();
+        var desc = $("#desc").val();
+        var pid = $("#project").val();
+        var xsrf = $("input[name='_xsrf']").val();
+        if (pid == '') {
+            alert("请选择项目");
+            return;
+        }
+        if (file == '') {
+            alert("请输入需要更新文件路径");
+            return;
+        }
+
+        $.ajax({
+                type: "POST",
+                url:"/rsync/add",
+                data: {file:file,desc:desc,pid:pid, _xsrf:xsrf},
+                dataType: 'json',
+                success: function(data) {
+                    if(data.status == -1) {
+                        alert(data.msg);
+                        return;
+                    } else if (data.status == 1) {
+                        window.location.reload();
+                    } else {
+                        alert('未知错误请重试');
+                        return;
+                    }
+                }
+            });
+    }
+</script>
+
