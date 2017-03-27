@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
+from torngas.template.jinja2_loader import Jinja2TemplateLoader
 
 PROJECT_PATH = os.path.dirname(os.path.dirname(__file__))
 

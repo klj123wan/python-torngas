@@ -3,6 +3,7 @@
 from ..handlers.base_handler import BaseHandler
 from ..models.project_models import Project
 from ..models.rsync_models import Rsync
+import time
 
 projectModel = Project()
 rsyncModel = Rsync()
@@ -12,8 +13,15 @@ class Add(BaseHandler):
     def get(self):
         data = {}
         data['userInfo'] = BaseHandler.userArr
+        noPublish = rsyncModel.getNotPublishRsync()
+        j = len(noPublish)
 
-        self.render("admin/rsync_add.html", data=data,projects=self.projectAll())
+        #没有找到模板中格式化时间的方法暂时这样写吧
+        for i in range(j):
+            noPublish[i].created = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(noPublish[i].created))
+
+
+        self.render("admin/rsync_add.html", data=data,projects=self.projectAll(),noPublist=noPublish)
 
     def post(self, *args, **kwargs):
         data = {}

@@ -58,3 +58,6 @@ class Rsync(BaseModel):
     def getNormalProjects(self):
         #return Project.Q.filter(Project.status == 1).all()
         return 1
+
+    def getNotPublishRsync(self):
+        return Rsync.Q.filter(Rsync.status==0).all()
