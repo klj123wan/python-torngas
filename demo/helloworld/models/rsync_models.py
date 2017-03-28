@@ -60,4 +60,4 @@ class Rsync(BaseModel):
         return 1
 
     def getNotPublishRsync(self):
-        return Rsync.Q.filter(Rsync.status==0).all()
+        return Rsync.Q.filter(Rsync.status==0).order_by(Rsync.id.desc()).all()
