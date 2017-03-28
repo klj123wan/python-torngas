@@ -115,13 +115,13 @@
                                         <td>
                                             <span class="btn btn-primary showfiles" data-toggle="popover"
                                                   data-placement="bottom"
-                                                  data-content="{{ publish.files }}" title=""
+                                                  data-content="{{ publish.files }}"
                                                   data-original-title="修改文件列表如下" alt="{{ publish.files }}">
                                             <i class="fa fa-file-text"></i>
                                             2
                                             </span>
                                         </td>
-                                        <td>{{ publish.created }}</td>
+                                        <td>{{ publish.createdl }}</td>
                                         <td>
                                             {% if publish.status == 1%}
                                                 <a href="/project/del?id={{ publish.id }}&status=0">删除</a>
@@ -152,6 +152,9 @@
 {% include 'footer.html' %}
 
 <script>
+    $(function() {
+        $(".showfiles").popover();
+    })
     function checkFrom() {
         var file = $("#patharea").val();
         var desc = $("#desc").val();
