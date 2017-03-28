@@ -37,7 +37,7 @@ class Add(BaseHandler):
 
         params = {'files': file, 'pid': pid, 'status': 0, 'description': desc,'project':projectInfo[0].path,
                   'username': data['userInfo']['userName'], 'uid': data['userInfo']['uid'], 'email':'konglingjian@gmail.com',
-                  'userip':'127.0.0.1'}
+                  'userip':'127.0.0.1', 'tagid' : self.getRsyncTagId(pid)}
 
         rsyncModel.addRsync( params)
         BaseHandler.successResponse(self, 'ok')
@@ -51,3 +51,11 @@ class Add(BaseHandler):
         if projectInfo[0].status == 1:
             status = 1
         return  status
+
+    def getRsyncTagId(self,pid):
+        rsyncInfo = rsyncModel.getLastRsync(pid)
+        if len(rsyncInfo) == 0:
+            return 1
+        else:
+            return rsyncInfo[0].tagid + 1
+

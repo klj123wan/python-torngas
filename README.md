@@ -20,4 +20,16 @@ python需要安装扩展库
 	SQLAlchemy
 	requests
 
-	
+
+RSYNC 安装
+
+    参考 http://sookk8.blog.51cto.com/455855/328076/
+    
+    wget https://rsync.samba.org/ftp/rsync/rsync-3.1.2.tar.gz
+    tar -zxvf rsync-3.1.2.tar.gz
+    cd rsync-3.1.2
+    ./configure --prefix=/usr/local/rsync
+    make
+    make install
+
+

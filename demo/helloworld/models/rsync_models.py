@@ -29,6 +29,7 @@ class Rsync(BaseModel):
     log_from_server = Column(String(1024), nullable=True)
     pid = Column(Integer, nullable=False)
     email = Column(String(64), nullable=False)
+    tagid = Column(Integer, nullable=False)
 
     # condition 将来传递参数 来获取数据
     def GetProjectByCondition(self, condition={}):
@@ -44,7 +45,7 @@ class Rsync(BaseModel):
     def addRsync(self, params):
         new_deploy = Rsync(uid=params['uid'], status=params['status'],username=params['username'], description=params['description'],
                            project=params['project'], files=params['files'], pid=params['pid'], email=params['email'],
-                           userip=params['userip'],created=time.time(),feedback=0,log_from_server='')
+                           userip=params['userip'],created=time.time(),feedback=0,log_from_server='',tagid=params['tagid'])
         Rsync.session.add(new_deploy)
         Rsync.session.commit()
         return 1
@@ -61,3 +62,7 @@ class Rsync(BaseModel):
 
     def getNotPublishRsync(self):
         return Rsync.Q.filter(Rsync.status==0).order_by(Rsync.id.desc()).all()
+
+    #获取最后一条项目更新的记录
+    def getLastRsync(self, pid):
+        return Rsync.Q.filter(Rsync.pid == pid).order_by(Rsync.id.desc()).limit(1).all()
