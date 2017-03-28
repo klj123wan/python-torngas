@@ -31,5 +31,10 @@ RSYNC 安装
     ./configure --prefix=/usr/local/rsync
     make
     make install
+    
+代码发布系统参考
+
+    http://www.cnblogs.com/itcomputer/p/4884688.html
+    
 
 
