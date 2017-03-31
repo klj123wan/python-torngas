@@ -78,4 +78,9 @@ RSYNC 配置
     http://www.cnblogs.com/itcomputer/p/4884688.html
     
 
+CRONDTAB
 
+    #上线代码
+    * * * * * /user/bin/python -m demo.cron.deploy
+    #回滚代码
+    * * * * * /user/bin/python -m demo.cron.rollback

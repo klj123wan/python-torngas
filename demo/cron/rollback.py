@@ -15,13 +15,14 @@ projectModel = Project()
 rsyncModel = Rsync()
 redisModel = Redis()
 
-def deploy():
-    deployCount = redisModel.lenDeploy()
+def rollback():
+
+    deployCount = redisModel.lenRollBack()
     if deployCount == 0:
         print 'ok'
         return ''
 
-    rsid = redisModel.popDelpoy()
+    rsid = redisModel.popRollBack()
 
     if rsid == None:
         print 'ok'
@@ -44,7 +45,7 @@ def rsync(info):
         print "fail"
         return
     #git
-    git = "git add . ; git commit -m '" +info.description +"' ; git tag " + str(info.tagid) + "; git pull"
+    git = "git checkout " + str(info.tagid)
     gitstatus = os.system(git)
     if gitstatus!= 0:
         print "git fail"
@@ -54,7 +55,8 @@ def rsync(info):
         shell = "/usr/bin/rsync -av --password-file=/data/www/python/www.torngas.com/demo/cron/rsync.password  " + localPath + '/' + info.files + '  konglj@' + server + "::backup/" + path
         shellstatus = os.system(shell)
         if shellstatus ==0:
-            rsyncModel.updateRsyncStatus(info.id, 2)
+            #已回滚状态
+            rsyncModel.updateRsyncStatus(info.id, 4)
         return
     else:
         shellstatus = 0
@@ -64,7 +66,8 @@ def rsync(info):
             if status!= 0:
                 shellstatus = 1
         if shellstatus == 0:
-            rsyncModel.updateRsyncStatus(info.id, 2)
+            # 已回滚状态
+            rsyncModel.updateRsyncStatus(info.id, 4)
     return 1
 
-deploy()
+rollback()
