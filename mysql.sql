@@ -26,7 +26,7 @@ CREATE TABLE `deploy_log` (
   `userip` varchar(15) NOT NULL default '' comment '用户ip',
   `created` int(11) NOT NULL default 0 comment '创建时间',
   `feedback` int(11) NOT NULL default 0 comment '是否审核',
-  `status` tinyint(4) NOT NULL COMMENT '0 待上线 1已上线 2 回滚',
+  `status` tinyint(4) NOT NULL COMMENT '0 待上线 1待上线 2 已上线 3 待回滚  4已回滚',
   `log_from_server` varchar(1024) NOT NULL,
   `pid` tinyint(4) unsigned NOT NULL DEFAULT '0' COMMENT '项目编号',
   `email` varchar(32) NOT NULL DEFAULT '' COMMENT '提交代码用户的email',

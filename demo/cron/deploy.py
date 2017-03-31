@@ -52,18 +52,23 @@ def rsync(info):
     gitstatus = os.system(git)
     if gitstatus!= 0:
         print "git fail"
-        return 
+        return
 
     if len(fileList) == 1:
         shell = "/usr/bin/rsync -av --password-file=/data/www/python/www.torngas.com/demo/cron/rsync.password  " + localPath + '/' + info.files + '  konglj@' + server + "::backup/" + path
-        print shell
-        print os.system(shell)
+        shellstatus = os.system(shell)
+        if shellstatus ==0:
+            rsyncModel.updateRsyncStatus(info.id, 2)
+        return
     else:
+        shellstatus = 0
         for i in range(len(fileList)):
             shell = "/usr/bin/rsync -av --password-file=/data/www/python/www.torngas.com/demo/cron/rsync.password  " + localPath + '/' + fileList[i] + '  konglj@' + server + "::backup/" + path
-            print shell
-
+            status = os.system(shell)
+            if status!= 0:
+                shellstatus = 1
+        if shellstatus == 0:
+            rsyncModel.updateRsyncStatus(info.id, 2)
     return 1
-
 
 deploy()
