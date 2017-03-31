@@ -118,18 +118,11 @@
                                                   data-content="{{ publish.files }}"
                                                   data-original-title="修改文件列表如下" alt="{{ publish.files }}">
                                             <i class="fa fa-file-text"></i>
-                                            2
+                                            {{ publish.fileCount }}
                                             </span>
                                         </td>
                                         <td>{{ publish.createdl }}</td>
-                                        <td>
-                                            {% if publish.status == 1%}
-                                                <a href="/project/del?id={{ publish.id }}&status=0">删除</a>
-                                                |
-                                                <a href="/project/put?id={{ publish.id }}">修改</a>
-                                            {% else %}
-                                                <a href="/project/del?id={{ publish.id }}&status=1">恢复</a>
-                                            {% end%}
+                                        <td><button type="button" onclick="deploy({{ publish.id }})" class="btn btn-info ">上线</button>
                                         </td>
                                     </tr>
                                 {% end %}
@@ -173,6 +166,31 @@
                 type: "POST",
                 url:"/rsync/add",
                 data: {file:file,desc:desc,pid:pid, _xsrf:xsrf},
+                dataType: 'json',
+                success: function(data) {
+                    if(data.status == -1) {
+                        alert(data.msg);
+                        return;
+                    } else if (data.status == 1) {
+                        window.location.reload();
+                    } else {
+                        alert('未知错误请重试');
+                        return;
+                    }
+                }
+            });
+    }
+
+    function deploy(id) {
+        if (id == '') {
+            alert("请选择上线的目标");
+            return;
+        }
+        var xsrf = $("input[name='_xsrf']").val();
+        $.ajax({
+                type: "POST",
+                url:"/rsync/deploy",
+                data: {id:id, _xsrf:xsrf},
                 dataType: 'json',
                 success: function(data) {
                     if(data.status == -1) {

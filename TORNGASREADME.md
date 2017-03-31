@@ -90,7 +90,7 @@ Torngas 是基于[Tornado](https://github.com/tornadoweb/tornado)的web mvc框�
 
 	在程序启动时，首先会检查 `--settings=` 是否给定如`--settings=settings.setting`，框架将自动加载应用目录下settings模块中的setting.py配置文件，如果未规定，则使用以上预设值默认配置。在项目中使用配置：
 
-		from torngas import settiings
+		from torngas import settings
 		
 		project_path = settings.PROJECT_PATH
 

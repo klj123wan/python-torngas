@@ -45,9 +45,11 @@ class Add(BaseHandler):
         checkEmail = self.get_argument('checkEmail', "")
         projectPath = self.get_argument('projectPath', "")
         gitPath = self.get_argument('gitPath', "")
-        if name == "" or projectPath == "" or gitPath == "":
+        serverAddress = self.get_argument('serverAddress', "")
+        if name == "" or projectPath == "" or gitPath == "" or serverAddress == "":
             self.redirect('/project/add')
-        params = {'name':name, 'checkcode':codeCheck, 'checkemail':checkEmail, 'path':projectPath, 'git_path':gitPath, 'status':1}
+        params = {'name':name, 'checkcode':codeCheck, 'checkemail':checkEmail, 'path':projectPath, 'git_path':gitPath,
+                  'status':1, 'server_address':serverAddress}
         project = Project()
         insertStatus = project.addProject(params)
         if insertStatus == 1:

@@ -10,6 +10,7 @@ CREATE TABLE `project` (
     `checkemail` varchar(50) default NULL,
     `path` varchar(30) default NULL,
     `git_path` varchar(200) not null default '' comment 'git仓库路径',
+    `server_address` varchar(50) not null default '' comment '远程服务器地址',
     PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT "项目列表";
 
@@ -25,7 +26,7 @@ CREATE TABLE `deploy_log` (
   `userip` varchar(15) NOT NULL default '' comment '用户ip',
   `created` int(11) NOT NULL default 0 comment '创建时间',
   `feedback` int(11) NOT NULL default 0 comment '是否审核',
-  `status` tinyint(4) NOT NULL COMMENT '-1 is abandoned\\n0 is unproccess\\n1 is processed\\n2 is error -> from server\\n3 is success -> everything is done\\n',
+  `status` tinyint(4) NOT NULL COMMENT '0 待上线 1已上线 2 回滚',
   `log_from_server` varchar(1024) NOT NULL,
   `pid` tinyint(4) unsigned NOT NULL DEFAULT '0' COMMENT '项目编号',
   `email` varchar(32) NOT NULL DEFAULT '' COMMENT '提交代码用户的email',

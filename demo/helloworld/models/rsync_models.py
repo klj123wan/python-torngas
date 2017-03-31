@@ -1,6 +1,6 @@
 # -*-coding=utf8-*-
 # your models module write here
-import datetime
+
 from torngas.db.dbalchemy import Model
 from sqlalchemy import *
 from sqlalchemy.orm import relationship, backref
@@ -37,9 +37,9 @@ class Rsync(BaseModel):
         return ''
 
     # 更新project status
-    def updateProjectStatus(self, id, status):
-        #return Project.Q.filter(Project.id == id).update({Project.status: status}, synchronize_session='fetch')
-        return  ''
+    def updateRsyncStatus(self, id, status):
+        return Rsync.Q.filter(Rsync.id == id).update({Rsync.status: status}, synchronize_session='fetch')
+
 
     # 添加project 或者修改
     def addRsync(self, params):
@@ -51,9 +51,8 @@ class Rsync(BaseModel):
         return 1
 
     # 获取项目信息
-    def getProjectInfo(self, id):
-        #return Project.Q.filter(Project.id == id).limit(1).all()
-        return  ''
+    def getRsyncInfo(self, id):
+        return Rsync.Q.filter(Rsync.id == id).limit(1).all()
 
     # 获取所有状态正常的项目
     def getNormalProjects(self):
@@ -66,3 +65,5 @@ class Rsync(BaseModel):
     #获取最后一条项目更新的记录
     def getLastRsync(self, pid):
         return Rsync.Q.filter(Rsync.pid == pid).order_by(Rsync.id.desc()).limit(1).all()
+
+

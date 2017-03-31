@@ -3,6 +3,7 @@
 	后端：python的torngas框架
 	前端：基于bootstrap的admintle框架编写
 	
+
 项目目录介绍
 
 	参考文件 TORNGASREADME.md
@@ -19,6 +20,7 @@ python需要安装扩展库
 	torngas
 	SQLAlchemy
 	requests
+	redis
 
 
 RSYNC 安装
@@ -66,6 +68,7 @@ RSYNC 配置
         密码配置 vim /etc/rsyncd.pw
         用户名：密码
         即 konglj:123456
+        
         
     客户端 只需要安装rsync即可 
     rsync -av www.torngas.com/* konglj@0.0.0.0::backup/www.torngas.com    

@@ -23,6 +23,7 @@ class Project(BaseModel):
     checkemail = Column(String(50), nullable=False)
     path = Column(String(30), nullable=False)
     git_path = Column(String(200), nullable=False)
+    server_address = Column(String(50), nullable=False)
 
     # condition 将来传递参数 来获取数据
     def GetProjectByCondition(self, condition={}):
@@ -37,7 +38,7 @@ class Project(BaseModel):
     def addProject(self, params, id=0):
         if id == 0:
             new_project = Project(name=params['name'], status=params['status'], checkcode=params['checkcode'],
-                                  checkemail=params['checkemail'],path=params['path'], git_path=params['git_path'])
+                                  checkemail=params['checkemail'],path=params['path'], git_path=params['git_path'],server_address=params['server_address'])
             Project.session.add(new_project)
             Project.session.commit()
             return 1
