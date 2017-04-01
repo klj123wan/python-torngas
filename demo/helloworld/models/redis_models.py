@@ -26,7 +26,7 @@ class Redis():
 
     # 向回滚队列中推送数据
     def pushRollBack(self, id):
-        return redisClient._client.lpush(self.getDeployKey(), id)
+        return redisClient._client.lpush(self.getRollBaclKey(), id)
 
     # 回滚队列的key
     def getRollBaclKey(self):
@@ -34,9 +34,9 @@ class Redis():
 
     # 从回滚队列取出一条数据
     def popRollBack(self):
-        return redisClient._client.rpop(self.getDeployKey())
+        return redisClient._client.rpop(self.getRollBaclKey())
 
     #获取回滚队列长度
     def lenRollBack(self):
-        return redisClient._client.llen(self.getDeployKey())
+        return redisClient._client.llen(self.getRollBaclKey())
 

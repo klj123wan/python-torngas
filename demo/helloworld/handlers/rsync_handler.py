@@ -114,6 +114,8 @@ class Rollback(BaseHandler):
 
     def post(self):
         id = self.get_argument('id', "")
+        redisModel.pushRollBack(id)
+
         rsyncInfo = rsyncModel.getRsyncInfo(id)
         if rsyncInfo[0].status != 2:
             BaseHandler.failResponse(self, '该条记录不能执行回滚')
