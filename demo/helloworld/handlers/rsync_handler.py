@@ -46,7 +46,7 @@ class Add(BaseHandler):
         if projectInfo[0].status == 0:
             BaseHandler.failResponse(self, '项目不存在')
 
-        params = {'files': file, 'pid': pid, 'status': 0, 'description': desc,'project':projectInfo[0].path,
+        params = {'files': file, 'pid': pid, 'status': rsyncModel.RSYNC_STATUS_ADD, 'description': desc,'project':projectInfo[0].path,
                   'username': data['userInfo']['userName'], 'uid': data['userInfo']['uid'], 'email':'konglingjian@gmail.com',
                   'userip':'127.0.0.1', 'tagid' : self.getRsyncTagId(pid)}
 
@@ -77,7 +77,7 @@ class Deploy(BaseHandler):
         rsyncInfo = rsyncModel.getRsyncInfo(id)
         if rsyncInfo[0].status != 0:
             BaseHandler.failResponse(self, '该条上线记录状态错误，不能上线')
-        #rsyncModel.updateRsyncStatus(id, 1)
+        rsyncModel.updateRsyncStatus(id, rsyncModel.RSYNC_STATUS_READY_DEPLOY)
         redisModel.pushDeploy(id)
         BaseHandler.successResponse(self, 'ok')
 
@@ -109,3 +109,15 @@ class List(BaseHandler):
 
         self.render("admin/rsync_list.html", data=data, projects=projectList, publistList=publish,search=params, pid=pid)
 
+
+class Rollback(BaseHandler):
+
+    def post(self):
+        id = self.get_argument('id', "")
+        rsyncInfo = rsyncModel.getRsyncInfo(id)
+        if rsyncInfo[0].status != 2:
+            BaseHandler.failResponse(self, '该条记录不能执行回滚')
+
+        rsyncModel.updateRsyncStatus(id, rsyncModel.RSYNC_STATUS_READY_ROLLBACK)
+        redisModel.pushRollBack(id)
+        BaseHandler.successResponse(self, 'ok')

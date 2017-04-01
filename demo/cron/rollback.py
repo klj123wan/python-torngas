@@ -56,7 +56,7 @@ def rsync(info):
         shellstatus = os.system(shell)
         if shellstatus ==0:
             #已回滚状态
-            rsyncModel.updateRsyncStatus(info.id, 4)
+            rsyncModel.updateRsyncStatus(info.id, rsyncModel.RSYNC_STATUS_ROLLBACKED)
         return
     else:
         shellstatus = 0
@@ -67,7 +67,7 @@ def rsync(info):
                 shellstatus = 1
         if shellstatus == 0:
             # 已回滚状态
-            rsyncModel.updateRsyncStatus(info.id, 4)
+            rsyncModel.updateRsyncStatus(info.id, rsyncModel.RSYNC_STATUS_ROLLBACKED)
     return 1
 
 rollback()

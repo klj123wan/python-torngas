@@ -8,11 +8,18 @@ import time
 import datetime
 
 
+
 class BaseModel(Model):
     __abstract__ = True
     __connection_name__ = 'default'
 
     id = Column(Integer, primary_key=True, nullable=False)
+
+    RSYNC_STATUS_ADD = 0  #增加
+    RSYNC_STATUS_READY_DEPLOY = 1 #待上线
+    RSYNC_STATUS_DEPLOYED = 2 #上线
+    RSYNC_STATUS_READY_ROLLBACK = 3 #待回滚
+    RSYNC_STATUS_ROLLBACKED = 4 #回滚
 
 class Rsync(BaseModel):
     __tablename__ = 'deploy_log'

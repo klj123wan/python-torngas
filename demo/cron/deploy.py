@@ -54,7 +54,7 @@ def rsync(info):
         shell = "/usr/bin/rsync -av --password-file=/data/www/python/www.torngas.com/demo/cron/rsync.password  " + localPath + '/' + info.files + '  konglj@' + server + "::backup/" + path
         shellstatus = os.system(shell)
         if shellstatus ==0:
-            rsyncModel.updateRsyncStatus(info.id, 2)
+            rsyncModel.updateRsyncStatus(info.id, rsyncModel.RSYNC_STATUS_DEPLOYED)
         return
     else:
         shellstatus = 0
@@ -64,7 +64,7 @@ def rsync(info):
             if status!= 0:
                 shellstatus = 1
         if shellstatus == 0:
-            rsyncModel.updateRsyncStatus(info.id, 2)
+            rsyncModel.updateRsyncStatus(info.id, rsyncModel.RSYNC_STATUS_DEPLOYED)
     return 1
 
 deploy()

@@ -63,6 +63,7 @@
                         <div class="form-group col-sm-1">
                             <label></label>
                             <div class="input-group ">
+                                {% raw xsrf_form_html() %}
                                 <button type="button" onclick="search()"> 搜索</button>
                             </div>
                         </div>
@@ -104,7 +105,8 @@
                                                 <button type="button"  class="btn btn-info ">待上线</button>
                                             {% end %}
                                             {% if publish.status == 2 %}
-                                                <button type="button" onclick="rollback({{ publish.id }})" class="btn btn-info ">已上线</button>
+                                                <button type="button"  class="btn btn-info ">已上线</button>
+                                                <button type="button" onclick="rollback({{ publish.id }})" class="btn btn-info ">回滚</button>
                                             {% end %}
                                             {% if publish.status == 3 %}
                                                 <button type="button"  class="btn btn-info ">待回滚</button>
