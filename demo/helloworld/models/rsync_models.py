@@ -5,6 +5,7 @@ from torngas.db.dbalchemy import Model
 from sqlalchemy import *
 from sqlalchemy.orm import relationship, backref
 import time
+import datetime
 
 
 class BaseModel(Model):
@@ -66,4 +67,16 @@ class Rsync(BaseModel):
     def getLastRsync(self, pid):
         return Rsync.Q.filter(Rsync.pid == pid).order_by(Rsync.id.desc()).limit(1).all()
 
-
+    def getPublishRsync(self, params):
+        where = "status != '0' "
+        if params['project'] != 0:
+            where += " and pid= '" + str(params['project']) + "'"
+        if params['sdate'] != '':
+            sdate = time.mktime(time.strptime(params['sdate'], "%Y-%m-%d"))
+            where += " and created >= '" + str(int(sdate)) + "'"
+        if params['edate'] != '':
+            edate = time.mktime(time.strptime(params['edate'], "%Y-%m-%d"))
+            where += " and created <= '" + str(int(edate)) + "'"
+        if params['uname'] != '':
+            where += " and username like '%" + params['uname'] + "%'"
+        return Rsync.Q.filter(where).order_by(Rsync.id.desc()).limit(1000).all()

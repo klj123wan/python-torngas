@@ -1,0 +1,183 @@
+{% include 'header.html' %}
+{% include 'menu.html' %}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            上线系统
+            <small>上线记录</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/"><i class="fa fa-dashboard"></i> 首页</a></li>
+            <li class="active">上线记录</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <!-- /.row -->
+         <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">上线列表</h3>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group col-sm-3">
+                            <label>开始时间:</label>
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control pull-right" id="datepicker"  value="{{ search['sdate']}}">
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label>结束时间:</label>
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control pull-right" id="datepicker1"  value="{{ search['edate'] }}">
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label>项目列表</label>
+                            <select class="form-control select2 select2-hidden-accessible" style="width: 100%;"
+                                    tabindex="-1" aria-hidden="true" name="project" id="project">
+                                <option value="">请选择项目</option>
+                                {% for project in projects %}
+                                <option value="{{ project.id }}"  {% if project.id == pid %} selected {% end %} >{{ project.name }} </option>
+                                {% end %}
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <label>提交人</label>
+                            <div class="input-group ">
+                                <input type="text" class="form-control pull-right" id="rysnc_uid"  value="{{ search['uname'] }}">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-1">
+                            <label></label>
+                            <div class="input-group ">
+                                <button type="button" onclick="search()"> 搜索</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>编号</th>
+                                <th>用户名</th>
+                                <th>描述</th>
+                                <th>项目</th>
+                                <th>文件</th>
+                                <th>提交时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% if publistList %}
+                                {% for publish in publistList %}
+                                    <tr>
+                                        <td>{{ publish.id }}</td>
+                                        <td>{{ publish.username }}</td>
+                                        <td>{{ publish.description }}</td>
+                                        <td>{{ publish.project }}</td>
+                                        <td>
+                                            <span class="btn btn-primary showfiles" data-toggle="popover"
+                                                  data-placement="bottom"
+                                                  data-content="{{ publish.files }}"
+                                                  data-original-title="修改文件列表如下" alt="{{ publish.files }}">
+                                            <i class="fa fa-file-text"></i>
+                                            {{ publish.fileCount }}
+                                            </span>
+                                        </td>
+                                        <td>{{ publish.createdl }}</td>
+                                        <td>
+                                            {% if publish.status == 1%}
+                                                <button type="button"  class="btn btn-info ">待上线</button>
+                                            {% end %}
+                                            {% if publish.status == 2 %}
+                                                <button type="button" onclick="rollback({{ publish.id }})" class="btn btn-info ">已上线</button>
+                                            {% end %}
+                                            {% if publish.status == 3 %}
+                                                <button type="button"  class="btn btn-info ">待回滚</button>
+                                            {% end %}
+                                            {% if publish.status == 4 %}
+                                                <button type="button"  class="btn btn-info ">已回滚</button>
+                                            {% end %}
+                                        </td>
+                                    </tr>
+                                {% end %}
+                            {% end %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+
+{% include 'footer.html' %}
+
+<script>
+    $(function() {
+        $(".showfiles").popover();
+    })
+
+    $("#datepicker").datepicker({
+        autoclose:true,
+        format: 'yyyy-mm-dd'
+    })
+    $("#datepicker1").datepicker({
+        autoclose:true,
+        format: 'yyyy-mm-dd'
+    })
+
+    function search() {
+        var sdate = $("#datepicker").val();
+        var edate = $("#datepicker1").val();
+        var project = $("#project").val();
+        var uname = $("#rysnc_uid").val();
+        window.location.href = "/rsync/list?sdate="+ sdate + "&edate=" + edate + "&project="+project+"&uname="+uname;
+    }
+
+    function rollback(id) {
+        if (id == '') {
+            alert("请选择回滚的目标");
+            return;
+        }
+        var xsrf = $("input[name='_xsrf']").val();
+        $.ajax({
+                type: "POST",
+                url:"/rsync/rollback",
+                data: {id:id, _xsrf:xsrf},
+                dataType: 'json',
+                success: function(data) {
+                    if(data.status == -1) {
+                        alert(data.msg);
+                        return;
+                    } else if (data.status == 1) {
+                        window.location.reload();
+                    } else {
+                        alert('未知错误请重试');
+                        return;
+                    }
+                }
+            });
+    }
+</script>
+

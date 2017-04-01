@@ -82,4 +82,30 @@ class Deploy(BaseHandler):
         BaseHandler.successResponse(self, 'ok')
 
 
+class List(BaseHandler):
+
+    def get(self):
+        data = {}
+        data['userInfo'] = BaseHandler.userArr
+        sdate = self.get_argument('sdate', '')
+        edate = self.get_argument('edate', '')
+        # get_argument 不能默认值 只能做了一些调整
+        pid = self.get_argument("project", "0", True) + "0"
+        if pid == 0:
+            pid = 0
+        else:
+            pid = int(pid)/10
+        uname = self.get_argument('uname', '')
+        params = {'sdate':sdate,'edate':edate,'project':pid,'uname':uname}
+        publish = rsyncModel.getPublishRsync(params)
+        j = len(publish)
+        projectList = projectModel.getNormalProjects()
+
+        # 没有找到模板中格式化时间的方法暂时这样写吧
+        for i in range(j):
+            publish[i].fileCount = len(publish[i].files.split("\n"))
+            if publish[i].created > 0:
+                publish[i].createdl = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(publish[i].created))
+
+        self.render("admin/rsync_list.html", data=data, projects=projectList, publistList=publish,search=params, pid=pid)
 

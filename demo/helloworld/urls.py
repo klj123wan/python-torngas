@@ -12,6 +12,7 @@ urls = route(
     u(r'/project/add/?', 'project_handler.Add'),
     u(r'/rsync/add/?', 'rsync_handler.Add'),
     u(r'/rsync/deploy/?', 'rsync_handler.Deploy'),
+    u(r'/rsync/list/?', 'rsync_handler.List'),
     #u(name='ProjectList', pattern=r'project/list/?', handler='project_handler.List'),
 )
 
